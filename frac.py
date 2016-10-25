@@ -12,7 +12,7 @@ class Fraction(object):
             whole_number = qd[0]
             remaining_num = qd[1]
             remaining_den = self.den
-            if qd[1] == 0:
+            if remaining_num == 0:
                 return 'Vulgar fraction equates to %s' % whole_number
             else:
                 f = Fraction(remaining_num, remaining_den)
