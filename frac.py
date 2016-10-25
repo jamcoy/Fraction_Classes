@@ -40,13 +40,18 @@ class Fraction(object):
         return Fraction(self.num * other.den, self.den * other.num)
 
     def __gt__(self, other):
-        return Fraction(self.num * other.den, self.den * other.num)
+        frac1 = float(self.num) / float(self.den)
+        frac2 = float(other.num) / float(other.den)
+        if frac1 > frac2:
+            return True
+        else:
+            return False
 
 
 f1 = Fraction(1, 2)
-f2 = Fraction(3, 8)
+f2 = Fraction(5, 8)
 print "f1 = 1/2"
-print "f2 = 3/8"
+print "f2 = 5/8"
 print
 
 print "f1 + f2 = "
@@ -68,3 +73,6 @@ print "f1 / f2 = "
 f3 = f1 / f2
 print f3
 print
+
+print "f1 > f2 = "
+print f1 > f2
